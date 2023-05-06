@@ -1,4 +1,3 @@
-import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Container } from 'utils';
 import { InputLabel, Input } from './form.styled';
