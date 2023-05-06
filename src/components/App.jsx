@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
 import { Section } from './section';
-import { Container } from 'utils';
-// import { Form } from './form';
+// import { Container } from 'utils';
+import { Form } from './form';
 import { Contacts } from './contacts';
 
-import { InputLabel, Input } from './form';
+// import { InputLabel, Input } from './form';
 
 export class App extends Component {
   state = {
@@ -21,7 +21,7 @@ export class App extends Component {
 
 
   getVisibleContacts = () => {
-    const { filter, contacts } = this.state;
+    const { filter, contacts} = this.state;
     // const normalizedFilter = filter.toLowerCase();
 
     // return contacts.filter(contact =>
@@ -32,23 +32,25 @@ export class App extends Component {
   };
 
 
-  handleInputChange = e => {
-    console.log(e.currentTarget.value);
-    this.setState({ name: e.currentTarget.value });
-  };
+  // handleInputChange = e => {
+  //   console.log(e.currentTarget.value);
+  //   this.setState({ name: e.currentTarget.value });
+  // };
 
   render() {
 
     // const { contacts, filter } = this.state;
     const visibleContacts = this.getVisibleContacts();
 
+ 
+
 
     return (
       <div>
         <Section title="Phonebook">
-          {/* <Form /> */}
+          <Form  />
 
-          <Container>
+          {/* <Container>
             <form>
               <InputLabel htmlFor="name">Name</InputLabel>
               <Input
@@ -62,7 +64,7 @@ export class App extends Component {
               />
               <button>Add contact</button>
             </form>
-          </Container>
+          </Container> */}
 
 
         
