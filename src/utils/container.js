@@ -1,11 +1,16 @@
 import styled from '@emotion/styled';
 
-export const Container = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
+export const Container = styled.section`
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
 
-padding: ${p => p.theme.sizes.m};
+  // padding: ${p => p.theme.sizes.m};
 
-outline: 1px solid black;
+  border-radius: ${p => p.theme.sizes.xxs};
+  box-shadow: ${p => p.theme.shadows.secondary};
+  margin: 20px auto;
+  padding: 20px 50px;
+  text-align: center;
+  max-width: 300px;
 `;
