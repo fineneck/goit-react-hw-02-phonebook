@@ -10,7 +10,6 @@ import { ContactForm } from '../contactForm/ContactForm';
 import { ContactList } from '../contactList/ContactList';
 // import { Filter } from './Filter';
 
-
 export class App extends Component {
   state = {
     contacts: [
@@ -22,25 +21,22 @@ export class App extends Component {
     filter: '',
   };
 
- 
-
-  formSubmit = ({id, name, number}) => {
+  formSubmit = ({ id, name, number }) => {
     console.log({ id, name, number });
-    
+
     // const { contacts } = this.state;
 
     const newContact = {
       id: nanoid(),
       name: name,
       number: number,
-    }
-    this.setState(({contacts}) => ({
-      contacts: [newContact, ...contacts] ,
-    }))  
+    };
+    this.setState(({ contacts }) => ({
+      contacts: [newContact, ...contacts],
+    }));
   };
 
   render() {
-
     const { contacts } = this.state;
 
     return (
@@ -48,7 +44,7 @@ export class App extends Component {
         <Section title="Phonebook">
           <ContactForm onSubmit={this.formSubmit} />
         </Section>
-        <Filter/>
+        <Filter />
         <Section title="Contacts">
           <ContactList contacts={contacts} />
         </Section>
