@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { nanoid } from 'nanoid';
 
-// import { Section } from './section';
+import { Section } from './section';
 // import { Container } from 'utils';
-// import { ContactForm } from './contactsForm';
-// import { ContactList } from './contactList';
+import { ContactForm } from './contactsForm';
+import { ContactList } from './contactList';
 
-// import { ContactForm } from '../contactForm/ContactForm';
-// import { ContactList } from '../contactList/ContactList';
-// import { Filter } from './Filter';
+import { ContactForm } from '../contactForm/ContactForm';
+import { ContactList } from '../contactList/ContactList';
+import { Filter } from './Filter';
 
 export class App extends Component {
   state = {
